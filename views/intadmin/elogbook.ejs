@@ -1,0 +1,133 @@
+<div>
+  <%- include('./partials/header')%>
+  <!-- Thi s is the text input dashboard module -->
+
+</div>
+      <%- include('./partials/aside')%>
+      <!-- Thi s is the text input dashboard module -->
+      <div
+        class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in"
+      >
+        <header class="header bg-[#2EBFBC] shadow py-4 px-4">
+          <div class="header-content flex items-center flex-row">
+            <a href="#" class="md:hidden" id="menu">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </a>
+            <div class="flex ml-auto">
+              <a href="#" class="flex flex-row items-center">
+                <img
+                  src="./images/user.svg"
+                  class="h-10 w-10 p-2 bg-white border rounded-full"
+                />
+                <span class="flex flex-col ml-2">
+                  <span
+                    class="truncate w-20 font-semibold tracking-wide leading-none"
+                    >Stephen</span
+                  >
+                </span>
+              </a>
+            </div>
+          </div>
+        </header>
+        <div class="row p-5" x-data="handler()">
+          <div class="col">
+            <table class="table table-bordered align-items-center table-sm">
+              <thead class="thead-light">
+                <tr>
+                  <th>S/NO</th>
+                  <th>Date</th>
+                  <th>Work Done</th>
+                  <th>Add Image</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody>
+                <template x-for="(field, index) in fields" :key="index">
+                  <tr>
+                    <td x-text="index + 1"></td>
+                    <td>
+                      <input
+                        x-model="field.txt1"
+                        type="text"
+                        name="txt1[]"
+                        class="w-20 border-none focus:outline-none"
+                        placeholder="Input date"
+                      />
+                    </td>
+                    <!-- <td><input x-model="field.txt2" type="text" name="txt2[]" class="form-control"></td> -->
+                    <td>
+                      <textarea
+                        x-model="field.txt2"
+                        type="text"
+                        name="txt2[]"
+                        class="form-control"
+                      ></textarea>
+                    </td>
+                    <td>
+                      <div class="">
+                        <label class="block">
+                          <span class="sr-only"
+                            >Upload Diagram if available</span
+                          >
+                          <input
+                            type="file"
+                            class="block w-full text-sm text-slate-700 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-violet-50 file:text-[#2EBFBC] hover:file:bg-violet-100"
+                          />
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-small bg-red-600"
+                        @click="removeField(index)"
+                      >
+                        &times;
+                      </button>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="5" class="text-right">
+                    <button
+                      type="button"
+                      class="btn btn-info bg-black"
+                      @click="addNewField()"
+                    >
+                      + Add Row
+                    </button>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+            <button
+              class="w-full bg-[#2EBFBC] py-2 rounded-xl text-white font-bold hover:bg-[#107b79]"
+            >
+            
+              Save Progress ...
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <%- include('./partials/footer')%>
+  </body>
+</html>

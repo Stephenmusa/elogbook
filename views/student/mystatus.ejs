@@ -1,0 +1,72 @@
+<div>
+  <%- include('./partials/header')%>
+  <!-- Thi s is the text input dashboard module -->
+</div>
+  <%- include('./partials/aside')%>
+  <!-- This is the text input dashboard module -->
+  <div class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
+    <div class="bg-white w-[30%] place-self-center rounded-xl p-10 text-sm mt-40 relative">
+      <img src="./images/user.svg" alt=""
+          class="absolute w-14 p-3 top-[-25px] left-[155px] bg-[#2EBFBC] border-4 rounded-full">
+      <h1 class="text-center font-extralight text-3xl mt-5">Student Particulars</h1>
+      <form action="index.html" class="font-semibold mt-6 mb-0">
+          <div>
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" class="input-form-reg" placeholder="Emeka Ahmad Tunde">
+          </div>
+          <div>
+              <label for="programme">Programme of Study</label>
+              <input type="text" name="programme" id="programme" class="input-form-reg" placeholder="Computer Science">
+          </div>
+          <div>
+              <label for="level">Level</label>
+              <input type="number" name="level" id="level" placeholder="300/400" class="input-form-reg">
+          </div>
+          <div>
+              <label for="year">SIWES Year</label>
+              <input type="text" name="year" id="year" class="input-form-reg" placeholder="2022">
+          </div>
+          <div>
+              <label for="establishment">Name of establishment being attached</label>
+              <input type="text" name="establishment" id="establishment" class="input-form-reg"
+                  placeholder="e.g Microsoft">
+          </div>
+          <div>
+              <label for="supervisor">Name of industry based supervisor</label>
+              <input type="text" name="supervisor" id="supervisor" class="input-form-reg"
+                  placeholder="e.g. Usman Bola">
+          </div>
+          <div>
+              <label for="reg">Registration Number</label>
+              <input type="text" name="reg" id="reg" class="input-form-reg" placeholder="e.g FCP/CSC/../..">
+          </div>
+          <div class="grid grid-cols-2 mb-10 mt-10 text-left">
+              <div class="">
+                  <label for="" class="font-semibold">Passport:</label>
+                  <span class="block text-xs font-extralight">The file size should not be greater that 2mb</span>
+              </div>
+              <div class="">
+                  <label class="block">
+                      <span class="sr-only">Choose profile photo</span>
+                      <input type="file" class="block w-full text-sm text-slate-700
+                        file:mr-4 file:py-2 file:px-4
+                        file:rounded-full file:border-0
+                        file:text-xs file:font-semibold
+                        file:bg-violet-50 file:text-[#2EBFBC]
+                        hover:file:bg-violet-100
+                      " />
+                  </label>
+              </div>
+          </div>
+
+          <button
+              class="bg-[#2EBFBC] py-3 px-5 w-full rounded-xl hover:bg-[#13716f] font-bold text-white">Submit</button>
+      </form>
+  </div>
+  </div>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+<%- include('./partials/footer')%>
+</body>
+
+</html>

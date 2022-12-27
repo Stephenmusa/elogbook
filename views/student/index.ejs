@@ -1,0 +1,59 @@
+
+ <!-- <div>
+  <%- include('./partials/header')%>
+  <!-- Thi s is the text input dashboard module 
+</div> -->
+    <%- include('./partials/header')%>
+  <div class="bg-white w-full items-center justify-center flex-cols">
+    <h2 class="uppercase text-center font-semibold text-5xl text-[#2EBFBC]">
+      Federal University Dutse
+    </h2>
+    <h3 class="uppercase text-center font-italic text-2xl text-[#2EBFBC]">
+      P.M.B 7156, Dutse, Jigawa
+    </h3>
+    <div
+      class="grid grid-cols-2 space-x-10 place-self-center rounded-xl p-10 h-4/5"
+    >
+      <div class="p-5 mt-16">
+        <h1 class="font-bold text-3xl text-[#2EBFBC] mb-5">
+          Electronic LogBook
+        </h1>
+        <p class="text-justify">
+          The students industrial work experience scheme (S.I.W.E.S) e-logbook
+          is an app that will enable student enter their daily report or
+          activities and is to be submitted at the end of every week to the
+          school supervisor for proper monitoring and assessment of his/her work
+        </p>
+        <span class="block text-sm mt-5"
+          >Note: Your can login with your
+          <span class="text-[#2EBFBC]">myportal</span> credentials</span
+        >
+      </div>
+      <div class="pl-10 mt-12">
+        <h2 class="text-center font-light text-2xl mb-5 text-[#2EBFBC]">
+          Student Login
+        </h2>
+        <form action="index.html">
+          <div class="">
+            <label for="matric-number">Matric Number</label>
+            <input type="text" placeholder="Matric Number" class="input-form" />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" class="input-form" />
+          </div>
+          <button
+            class="bg-[#2EBFBC] py-2 px-16 text-white rounded-lg hover:bg-[#2B2C30] transition-all duration-200 ease-in-out"
+          >
+            Login
+          </button>
+        </form>
+        <a href="#" class="text-xs"
+          >Forgot <span class="text-[#2EBFBC] mt-5">Username/Password</span>?</a
+        >
+      </div>
+    </div>
+  </div>
+
+</html>
+<%- include('./partials/footer')%>
